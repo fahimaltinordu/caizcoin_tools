@@ -108,6 +108,20 @@
 		window.onload = () => {
 			$("#preloader").delay(1e3).fadeOut("slow")
 		}
+		//touch button scale 
+		const shadowbtn = document.querySelectorAll('.shadowbtn');
+		shadowbtn.forEach(eachBtn => {
+			eachBtn.addEventListener('touchstart', e => {
+				eachBtn.style.transform = "scale(0.9)";
+			});
+
+			eachBtn.addEventListener('touchend', e => {
+				eachBtn.style.transform = "scale(1)";
+				eachBtn.style.boxShadow = "initial";
+
+			});
+		});
+
 	</script>
 
   </body>
