@@ -81,7 +81,8 @@ p {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	
+	padding-top:15px;
+	padding-bottom:15px;
 }
 
 .cardlogo {
@@ -96,7 +97,7 @@ p {
 	padding:5px;
 	border-radius:5px;
 	width:90%;
-	margin-top:10px;
+	/* margin-top:10px; */
 }
 .content p {
 	font-size:16px;
@@ -131,8 +132,9 @@ p {
     color: white;
     outline: 0;
 	border: 0;
-	margin-bottom: 10px;
 	margin-top: 20px;
+	/* margin-bottom: 10px;
+	margin-top: 20px; */
 	
 }
 #createbutton:hover {
@@ -376,13 +378,14 @@ p {
 	.cardlogo img {
 		height:100px;
 	}
-	#createbutton {
+	/* #createbutton {
 		margin-top: 10px;
-	}
+	} */
 	.orta-alan {
 		margin-top: 10px;
 		margin-bottom: 10px;
-		height: 398px;
+		/* height: 398px; */
+		/* overflow:auto; */
 	}
 	.cardlogo {
 		margin-top: 0;

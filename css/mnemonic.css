@@ -81,6 +81,8 @@ p {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	padding-top:10px;
+	padding-bottom:10px;
 	
 }
 
@@ -96,7 +98,7 @@ p {
 	padding:5px;
 	border-radius:5px;
 	width:90%;
-	margin-top:30px;
+	/* margin-top:30px; */
 }
 .content p {
 	font-size:16px;
@@ -128,7 +130,7 @@ p {
     color: white;
     outline: 0;
 	border: 0;
-	margin-bottom: 10px;
+	/* margin-bottom: 10px; */
 }
 #balancebutton:hover {
 	background-color: white;
@@ -272,13 +274,14 @@ p {
 	.content {
 		margin-top: 5px;
 	}
-	#createbutton {
+	/* #createbutton {
 		margin-top: 10px;
-	}
+	} */
 	.orta-alan {
 		margin-top: 10px;
 		margin-bottom: 10px;
-		height: 398px;
+		/* height: 398px; */
+		/* overflow:auto; */
 	}
 	#inputbalance {
 		margin-bottom: 15px;
