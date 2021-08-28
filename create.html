@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Create CAIZCOIN (CAIZ) wallet keystore file" />
+	<meta name="keywords" content="caizcoin, caiz, CaizCard, CaizApi, CaizStick, CaizATM, CaizPOS, CaizStaking, CaizScan, CaizBank, payment, cryptocurrency, bitcoin, ethereum, eth, btc, coin, crypto, sale, point, gateway" />
+	<meta name="author" content="PlusBit" />
+	
+    
+	<title>CAIZCOIN ĐApp - Create Wallet</title>
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="img/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- MAIN STYLES-->
+    <link rel="stylesheet" href="css/create.css">
+
+	 <!-- FONTAWESOME STYLES-->
+	<script src="https://kit.fontawesome.com/a90a45c743.js" crossorigin="anonymous"></script> 
+	<link rel="stylesheet" href="css/font-awesome-animation.min.css">
+  </head>
+
+
+
+<body>
+
+		<!-- Preloader Start -->
+		<div id="preloader">
+			<div class="loader3">
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<!-- Preloader End -->
+
+		<div class="menu-bar noselect">
+			<div class="logo">
+				<img draggable="false" src="img/caiz_logo_white.svg" alt="CAIZ"> 
+			</div>
+			<div class="title noselect">
+				<p>CAIZ ĐApp</p>
+			</div>
+		</div>
+		
+		<div class="orta-alan">
+			<div class="cardlogo"><img draggable="false" src="img/wilc-icon2.svg" alt="CAIZ" ></div>
+			
+			<div class="content noselect">
+				<h3>Create CAIZ & ETH Wallet</h3>
+				<p style="text-align: justify">For stronger encryption choose a stronger password. <strong>You will need this password + Keystore file to unlock your wallet. You can also directly use the given Private key to unlock your wallet.</strong> Please, store your password, Keystore file and private key in a safe place, preferably an external device without access to the internet (like USB). <strong>In case of loss, we won't be able to recover your password, Keystore file or private key.</strong></p>
+			</div>
+			
+			
+			<button id="createbutton" type="button" data-toggle="modal" data-target="#createwalletmodal" >Create New Wallet</button>
+			
+			<!-- Modal -->
+				 
+				<div class="modal fade" id="createwalletmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					<div  class="modal-dialog" role="document">
+						<div class="modal-content" >
+						
+						<div class="modal-header" >
+							<h4 class="modal-title" id="myModalLabel"> <b>Create CAIZ & ETH Wallet</b></h4>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="backcreatewalletbutton()"><span aria-hidden="true">&times;</span></button>
+						</div>
+						
+						<div class="modal-body">
+						  <form class="iew_form__create_new_wallet">
+
+								<div id="show_hide_password" >
+									  <input type="password" class="form-control" id="createwalletpass" placeholder="Password" >
+									  <div id="show_hide">
+										<a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+									  </div>
+								</div>
+
+								<div class="form-group">
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+									</div>
+								</div>
+
+
+								<div class="form-group">
+									<button type="submit" id="btncreatenewwallet" class="noselect"> Create New Wallet</button>
+									<p id="createwalleterror"></p>
+								</div>
+							</form>
+
+							<form class="iew_form__create_new_wallet_done">
+								<p style="text-align: justify; font-size:10px; margin-bottom: 10px;">
+									A keystore file is a password-encrypted file which contains your private key on the Ethereum network. Your private key is used to sign transactions when sending crypto assets from your address. Because both the keystore file and a password are required to unlock access to your Ethereum address, this adds an additional layer of security as both file and password are required together. If someone gains a copy of your file but does not have the password, your funds are still secure, as opposed to your naked private key stored in a plain text file. Your private key is:
+								</p>
+
+								<div style="display:flex; flex-direction:column;" class="form-group">
+									<label style="margin-bottom: 10px;"><span style="font-size: 10px; background: #198754; padding: 4px; color: white; border-radius: 2px; margin-bottom:10px;" class="private-key">None</span></label>
+									
+									<a class="btn btn-success download-json-file noselect" href="#" role="button">Download Keystore / JSON File</a>
+								</div>                        
+							</form>
+							
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				 
+		</div>
+		
+		
+		<footer class="footer noselect">
+			<p>Copyright © 2021 All Rights Reserved | Powered by PlusBit</p>
+		</footer>
+		
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>	
+	<script src="js/ethers.min.js"></script>
+	<script src="js/create.js"></script>
+	<script>
+		window.onload = () => {
+			$("#preloader").delay(1e3).fadeOut("slow")
+		}
+	</script>
+	
+</body>
+
+</html>
+
+
+

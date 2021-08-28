@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: Euclid, Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    width:100%;
+    height:100vh;
+    background-color: rgb(41, 44, 44);
+    border-radius: 15px;
+    transition: transform 0.5s;
+    background-image: url(../img/wilc.png);
+    background-repeat: no-repeat;
+    background-size:200px;
+    background-position:center;
+}
+.blur {
+    position:absolute;
+    left:calc(50% - 175px);
+    top:calc(50% - 150px);
+    width:350px;
+    height:300px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-evenly;
+    text-align:center;
+    border-radius:10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    transition: transform 0.5s;
+    cursor:pointer;
+}
+.blur h3 {
+    color:white;
+}
+.blur p {
+    color:white;
+    font-size: 10px;
+}
+.blur p a {
+    color:white;
+    font-weight: 700;
+    font-size: 10px;
+}
+.blur:hover {
+    transform: scale(1.07);
+}
+.blur:hover p {
+    color: rgb(7, 224, 224);
+}
+.blur:hover h3:nth-of-type(2) {
+    color: rgb(7, 224, 224);
+}
+
+#preloader{
+	position:fixed;background:#fff;top:0;left:0;right:0;bottom:0;
+	z-index:9999999999;
+	height:100vh;width:100vw;
+	display:flex;
+	align-items:center;
+	justify-content:center
+}
+.loader3{
+	width:50px;height:50px;display:inline-block;padding:0;text-align:left
+}
+.loader3 span {
+	position:absolute;display:inline-block;width:50px;height:50px;border-radius:100%;background:#0b3e3a;-webkit-animation:loader3 1.5s linear infinite;animation:loader3 1.5s linear infinite
+}
+.loader3 span:last-child {
+	animation-delay:-.9s;-webkit-animation-delay:-.9s
+}
+
+@keyframes loader3{0%{-webkit-transform:scale(0,0);transform:scale(0,0);opacity:.8}100%{-webkit-transform:scale(1,1);transform:scale(1,1);opacity:0}}
+@-webkit-keyframes loader3{0%{-webkit-transform:scale(0,0);opacity:.8}100%{-webkit-transform:scale(1,1);opacity:0}}
+
+@media screen and (max-width:376px) {
+    .blur {
+        left:calc(50% - 125px);
+        width:250px;
+        text-align:center;
+    }
+}

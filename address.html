@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Validate CAIZCOIN (CAIZ) address by using ethers.js" />
+	<meta name="keywords" content="caizcoin, caiz, CaizCard, CaizApi, CaizStick, CaizATM, CaizPOS, CaizStaking, CaizScan, CaizBank, payment, cryptocurrency, bitcoin, ethereum, eth, btc, coin, crypto, sale, point, gateway" />
+	<meta name="author" content="PlusBit" />
+	
+    
+	<title>CAIZCOIN ĐApp - Address Validation</title>
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="img/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- MAIN STYLES-->
+    <link rel="stylesheet" href="css/address.css">
+
+	 <!-- FONTAWESOME STYLES-->
+	<script src="https://kit.fontawesome.com/a90a45c743.js" crossorigin="anonymous"></script> 
+	<link rel="stylesheet" href="css/font-awesome-animation.min.css">
+  </head>
+  
+  <body>
+		<!-- Preloader Start -->
+		<div id="preloader">
+			<div class="loader3">
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<!-- Preloader End -->
+	   <div class="menu-bar noselect">
+			<div class="logo">
+				<img draggable="false" src="img/caiz_logo_white.svg" alt="CAIZ"> 
+			</div>
+			<div class="title noselect">
+				<p>CAIZ ĐApp</p>
+			</div>
+		</div>
+		
+		<div class="orta-alan">
+			<div class="cardlogo"><img draggable="false" src="img/validateaddress.png" alt="CAIZ" ></div>
+			
+			<div class="content noselect">
+				<h3>Validate CAIZ Address</h3>
+				<p>Input your CAIZ/ETH address and click button</p>
+			</div>
+			
+			<input id="inputbalance" type="text" class="form-control" placeholder="0x000000000000000000000000000000000000000" onfocus="this.placeholder = ''" onblur="this.placeholder = '0x000000000000000000000000000000000000000'" aria-label="Username" aria-describedby="basic-addon1">
+			
+			<button id="balancebutton" onclick="CheckAddress()" type="button" >Check CAIZ Address</button>
+			
+			<!-- Modal -->
+				<div id="modalresult" class="modal fade" role="dialog">
+					  <div class="modal-dialog">
+
+						<!-- Modal content-->
+						<div class="modal-content">
+						  <div class="modal-header">
+							<h4 class="modal-title">Error!</h4>
+						  </div>
+						  <div class="modal-body">
+							<p class="modalcontent">unexpected error occured!</p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="closemodal" data-dismiss="modal">Close</button>
+						  </div>
+						</div>
+
+					  </div>
+				 </div>
+			</div>
+		
+		
+		<footer class="footer noselect">
+			<p>Copyright © 2021 All Rights Reserved | Powered by PlusBit</p>
+		</footer>
+		
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>	
+	<script src="js/ethers.min.js"></script>
+	<script src="js/address.js"></script>
+	<script>
+		window.onload = () => {
+			$("#preloader").delay(1e3).fadeOut("slow")
+		}
+	</script>
+
+  </body>
+</html>

@@ -1,0 +1,323 @@
+@font-face{font-family:point-bold;src:url(../webfonts/PointBold.woff)}
+@font-face{font-family:point-regular;src:url(../webfonts/PointRegular.woff)}
+@font-face{font-family:point-semibold;src:url(../webfonts/PointSemiBold.woff)}
+
+* {
+	font-family: point-bold, Arial, sans-serif;
+	box-sizing: border-box;
+}
+
+body {
+  font-size: 0.9rem;
+  background: #f1f1f1;
+  width: 100%;
+  height:100%;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+	
+}
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  z-index:-1;
+  position:absolute;
+}
+
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+#dashboardid {
+    width: 90vw;
+    min-height: calc(100vh - 220px);
+	display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+	align-content: start;
+	/* min-height: 300px; */
+    /* display: flex; */
+    /* align-content: space-evenly; */
+    /* justify-content: space-evenly; */
+    /* box-shadow: 0 1px 6px rgb(0 0 0 / 10%), 0 2px 24px rgb(0 0 0 / 20%); */
+    /* flex-wrap: wrap; */
+    border: 0;
+    border-radius: 10px;
+    padding: 5px;
+	margin-top:20px;
+	margin-bottom:20px;
+	box-sizing: border-box;
+}
+.shadowbtn.disabedanchor {
+	/* cursor: not-allowed !important; */
+	pointer-events: none;
+	cursor: default;
+	opacity:0.8;
+}
+.shadowbtn{
+    height:85px;
+    /* width:40%; */
+    color: #0a3e3a;
+	background-color: rgba(211,211,211,0.4);
+	border-radius:10px;
+	margin: 5px;
+	text-align: center;
+	text-decoration: none;
+	outline: 0 !important;
+	display: flex;
+    align-content: center;
+    justify-content: center;
+	flex-direction: column;
+	font-weight:700;
+	padding: 5px;
+	position: relative;
+	transition: transform 0.3s ease-in-out;
+}
+
+.shadowbtn:hover {
+    box-shadow: 0px 0px 4px 3px grey, 0 6px 5px lightgrey;
+	color: #129748;
+}
+
+.shadowbtn:active {
+    transform: scale(0.9);
+}
+
+.cardlogo {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+
+}
+
+.cardicon {
+    font-weight: 900;
+    font-size: 20px;
+	margin-bottom: 5px;
+}
+
+#copyright0 {
+	font-family: point-regular, Arial, sans-serif;
+	text-align: center;
+	width: 100%;
+	height:50px;
+	color: #ffffff;
+	background:#129748;
+	padding:5px;
+	z-index: 9999;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	box-sizing: border-box;
+	bottom: 0;
+    position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -ms-sticky;
+	position: -o-sticky;
+	position:sticky;
+}
+#copyright1 {
+	margin-top: 0;
+    margin-bottom: 0;
+}
+#brand0 {
+	text-align: center;
+	width: 100%;
+	height:130px;
+	color: #ffffff;
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -ms-sticky;
+	position: -o-sticky;
+	position:sticky;
+	top:0;
+	background:#129748;
+	padding:7px;
+	z-index: 9998;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+	box-sizing: border-box;
+}
+#brand1 {
+	margin-top: 0;
+    margin-bottom: 0;
+	font-weight: 700;
+}
+#brandlogo {
+	padding: 5px;
+}
+
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#preloader{
+	position:fixed;background:#fff;top:0;left:0;right:0;bottom:0;
+	z-index:9999999999;
+	height:100vh;width:100vw;
+	display:flex;
+	align-items:center;
+	justify-content:center
+}
+.loader3{
+	width:50px;height:50px;display:inline-block;padding:0;text-align:left
+}
+.loader3 span {
+	position:absolute;display:inline-block;width:50px;height:50px;border-radius:100%;background:#0b3e3a;-webkit-animation:loader3 1.5s linear infinite;animation:loader3 1.5s linear infinite
+}
+.loader3 span:last-child {
+	animation-delay:-.9s;-webkit-animation-delay:-.9s
+}
+
+@keyframes loader3{0%{-webkit-transform:scale(0,0);transform:scale(0,0);opacity:.8}100%{-webkit-transform:scale(1,1);transform:scale(1,1);opacity:0}}
+@-webkit-keyframes loader3{0%{-webkit-transform:scale(0,0);opacity:.8}100%{-webkit-transform:scale(1,1);opacity:0}}
+
+
+@media screen and (min-width:1000px) {
+	
+	#brandlogo {
+		width:300px;
+	}
+	#brand1 {
+		font-size: 24px;
+	}
+	.shadowbtn{
+		font-size:13px;
+	}
+	.cardlogo > img {
+		width:40px;
+	}
+	#copyright1 {
+		font-size: 14px;
+	}
+
+}
+
+@media (min-width:800px) and (max-width:1000px) {
+	
+	#brandlogo {
+		width:270px;
+	}
+	#brand1 {
+		font-size: 22px;
+	}
+	.shadowbtn{
+		font-size:13px;
+	}
+	.cardlogo > img {
+		width:30px;
+	}
+	#copyright1 {
+		font-size: 15px;
+	}
+
+}
+
+@media (min-width:600px) and (max-width:800px) {
+	
+	#brandlogo {
+		width:250px;
+	}
+	#brand1 {
+		font-size: 20px;
+	}
+	.shadowbtn{
+		font-size:13px;
+	}
+	.cardlogo > img {
+		width:25px;
+	}
+	#copyright1 {
+		font-size: 12px;
+	}
+
+	
+}
+
+@media (min-width:400px) and (max-width:600px) {
+	#dashboardid {
+		/* flex-direction:column;
+		align-items:center;
+		flex-wrap:nowrap; */
+		box-shadow: none;
+	}
+	#brandlogo {
+		width:230px;
+	}
+	#brand1 {
+		font-size: 18px;
+	}
+	.shadowbtn{
+		/* width: 90%; */
+		/* height: 100px; */
+		font-size: 13px;
+	}
+	.cardlogo > img {
+		width:30px;
+	}
+	.cardicon {
+		font-size: 18px;
+	}
+	#copyright1 {
+		font-size: 11px;
+	}
+
+}
+
+@media screen and (max-width:400px) {
+	#dashboardid {
+		/* flex-direction:column;
+		align-items:center;
+		flex-wrap:nowrap; */
+		box-shadow: none;
+		grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+	}
+	#brandlogo {
+		width:200px;
+	}
+	#brand1 {
+		font-size: 16px;
+	}
+	.shadowbtn{
+		/* width: 90%; */
+		height: 80px;
+		font-size: 12px;
+	}
+	.cardlogo > img {
+		width:25px;
+	}
+	.cardicon {
+		font-size: 16px;
+	}
+	#copyright1 {
+		font-size: 9px;
+	}
+}
+@media only screen and (max-height:568px) {
+	#brand0 {
+		height:80px;
+	}
+	#brand0 #brandlogo {
+		height:50px !important;
+	}
+	#copyright0 {
+		height:auto;
+	}
+	
+}

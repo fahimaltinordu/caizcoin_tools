@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Check gas fee for CAIZCOIN (CAIZ)" />
+	<meta name="keywords" content="caizcoin, caiz, CaizCard, CaizApi, CaizStick, CaizATM, CaizPOS, CaizStaking, CaizScan, CaizBank, payment, cryptocurrency, bitcoin, ethereum, eth, btc, coin, crypto, sale, point, gateway" />
+	<meta name="author" content="PlusBit" />
+    <title>Check Gas Fee</title>
+
+    <!-- Favicon -->
+	<link rel="shortcut icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/gas.css">
+    <!-- FONTAWESOME STYLES-->
+	<script src="https://kit.fontawesome.com/a90a45c743.js" crossorigin="anonymous"></script> 
+	<link rel="stylesheet" href="css/font-awesome-animation.min.css">
+</head>
+<body>
+    <!-- Preloader Start -->
+    <div id="preloader">
+        <div class="loader3">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- Preloader End -->
+
+    <div class="content">
+        <img src="img/caiz_logo.png" alt="logo">
+        <table>
+            <caption>CAIZ Gas Tracker</caption>
+            <thead>
+                <tr>
+                    <td>Low</td>
+                    <td>Average</td>
+                    <td>High</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="lowqwei"><i class="fas fa-spinner faa-spin animated "></i> </td>
+                    <td id="averageqwei"><i class="fas fa-spinner faa-spin animated "></i> </td>
+                    <td id="highqwei"><i class="fas fa-spinner faa-spin animated "></i> </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Data comes from  <a href="https://etherscan.io/gastracker">Etherscan</a></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="js/gas.js"></script>
+    <script>
+		window.onload = () => {
+			$("#preloader").delay(1e3).fadeOut("slow")
+		}
+	</script>
+</body>
+</html>

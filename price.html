@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Check Wrapped ILCOIN (WILC) price" />
+	<meta name="keywords" content="wilc, payment, cryptocurrency, wrapped, ilcoin, bitcoin, ethereum, eth, btc, coin, crypto, sale, point, gateway" />
+	<meta name="author" content="PlusBit" />
+    <title>WILC Price</title>
+
+    <!-- Favicon -->
+	<link rel="shortcut icon" href="img/IcoWilc.ico">
+
+    <link rel="stylesheet" href="css/price.css">
+</head>
+<body>
+
+    <!-- Preloader Start -->
+    <div id="preloader">
+        <div class="loader3">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- Preloader End -->
+
+    <div class="blur">
+        <h3>Wrapped ILCOIN Price</h3>
+        <h3>1 WILC = <span id="price"></span> USD</h3>
+        <p>* Getting the price data from <a href="http://coinmarketinfo.com/" target="_blank">Coinmarketinfo</a>, this can take some time</p>
+        <p>* Drag me!</p>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="js/price.js"></script>
+    <script>
+		window.onload = () => {
+			$("#preloader").delay(1e3).fadeOut("slow")
+		}
+	</script>
+</body>
+</html>

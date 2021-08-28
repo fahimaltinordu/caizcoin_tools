@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Point of sale, allows users to accept CAIZCOIN (CAIZ)" />
+	<meta name="keywords" content="caizcoin, caiz, CaizCard, CaizApi, CaizStick, CaizATM, CaizPOS, CaizStaking, CaizScan, CaizBank, payment, cryptocurrency, bitcoin, ethereum, eth, btc, coin, crypto, sale, point, gateway" />
+	<meta name="author" content="PlusBit" />
+	
+    
+	<title>CAIZ POS</title>
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="img/favicon.png">
+	
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- MAIN STYLES-->
+    <link rel="stylesheet" href="css/pos.css">
+	 <!-- FONTAWESOME STYLES-->
+	<script src="https://kit.fontawesome.com/a90a45c743.js" crossorigin="anonymous"></script> 
+	<link rel="stylesheet" href="css/font-awesome-animation.min.css">
+  </head>
+  
+  <body>
+		<!-- Preloader Start -->
+		<div id="preloader">
+			<div class="loader3">
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<!-- Preloader End -->
+
+  <div id="merkez">
+	   <div draggable="false" class="ustbilgi noselect">
+			<img id="logo" draggable="false" src="img/caiz_logo.png" alt="CAIZ" >
+			<h2>CAIZCOIN Point of Sale</h2>
+			<p>Caizcoin POS is a simple and user-friendly app to accept payments in CAIZ.</p>
+	   </div>
+ 
+       <div draggable="false" class="stepper noselect">
+			<div class="step--1 step-active">Address</div>
+			<div class="step--2">Amount</div>
+			<div class="step--3">Checkout</div>
+
+	   </div>
+	   
+	   <div draggable="false" class="counttime noselect"></div>
+
+
+	   <div class="orta">
+		  
+		  <form class="form form-active">
+				<div class="form--header-container noselect">
+				  <h1 class="form--header-title">
+					CAIZ Address
+				  </h1>
+
+				  <p class="form--header-text ">
+					Add your CAIZ address to receive payments
+				  </p>
+				</div>
+				<input autocomplete="off" id="checkAddress" type="text" placeholder="0x000000000000000000000000000000000000000" onfocus="this.placeholder = ''" onblur="this.placeholder = '0x000000000000000000000000000000000000000'" />
+				<div id="errorarea">
+					<p id="result2" ></p>
+				</div>
+				<button class="form__btn noselect" id="btn-1">Next</button>
+		  </form>
+  
+		  <form class="form">
+			 <div class="form--header-container noselect">
+				  <h1 class="form--header-title">
+					Payment Amount
+				  </h1>
+
+				  <p class="form--header-text">
+					Enter payment amount in $ (USD)
+				  </p>
+			 </div>
+				  <label id="usdsymbol">$</label>
+				  <input id="usdamount" type="number" min="0" step="0.01" placeholder="0.00" onpaste="return false;" onkeypress="return isNumberKey(event,this);" onfocus="this.placeholder = ''" onblur="this.placeholder = '0.00'" />
+
+
+				<div id="errorarea2">
+					<p id="result3" ></p>
+				</div>
+				<button class="form__btn noselect" id="btn-2-prev">Previous</button>
+				<button class="form__btn noselect" id="btn-2-next">Next</button>
+		  </form>
+
+		
+		 <div class="form--message"></div>
+		 
+		 <div class="form--result"></div>
+		 
+		 <div class="form--confirmation"></div>
+		 
+		 <div class="form--unconfirmation"></div>
+		 
+		</div>	 
+
+ </div>
+      
+              
+<div id="disclaimer0" >
+	<p id="disclaimer1">
+		<b>DISCLAIMER:</b> CAIZ POS app eliminates the involvement of a third-party processor, allowing merchants to accept payments directly from their customers within seconds, in a secured and trustless environment. No node required, no fees, no middleman, no additional hardware. Unlike custodial processors, CAIZ POS does not store any funds or key of merchants. It is an entirely P2P payment solution, with the convenience and benefits of a payment processor. Cryptocurrency goes directly to merchant's wallet. This app uses ether-js javascript library for address confirmations and listening incoming transactions. On the other hand Infura is used as provider. There is no monthly fee for merchants. It is completely free app for everyone.
+	</p>
+</div>
+
+<div id="copyright0">
+<p id="copyright1">Copyright © 2021 All Rights Reserved | Powered by PlusBit</p>
+</div>
+
+	
+    <script src="js/ethers.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/qrcode.js"></script>
+	<script src="js/pos.js"></script>
+	<script>
+		window.onload = () => {
+			$("#preloader").delay(1e3).fadeOut("slow")
+		}
+	</script>
+  </body>
+</html>
