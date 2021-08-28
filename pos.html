@@ -125,6 +125,20 @@
 		window.onload = () => {
 			$("#preloader").delay(1e3).fadeOut("slow")
 		}
+		//touch button scale 
+		const form_btn = document.querySelectorAll('.form__btn');
+		form_btn.forEach(eachBtn => {
+			eachBtn.addEventListener('touchstart', e => {
+				eachBtn.style.transform = "scale(0.9)";
+				eachBtn.style.backgroundColor  = "#0a3e3a";
+			});
+
+			eachBtn.addEventListener('touchend', e => {
+				eachBtn.style.transform = "scale(1)";
+				eachBtn.style.backgroundColor  = "#129748";
+
+			});
+		});
 	</script>
   </body>
 </html>
