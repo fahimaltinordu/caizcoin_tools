@@ -150,7 +150,7 @@ button:hover {
    background-color:#0a3e3a;
 }
 .form__btn {
-  background: #129748;
+    background-color: #129748;
     color: #fff;
     outline: none;
     border: none;
