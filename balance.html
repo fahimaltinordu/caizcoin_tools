@@ -94,6 +94,15 @@
 		window.onload = () => {
 			$("#preloader").delay(1e3).fadeOut("slow")
 		}
+		//touch button scale 
+		const balancebutton = document.querySelector('#balancebutton');
+		balancebutton.addEventListener('touchstart', e => {
+			balancebutton.style.transform = "scale(0.95)";
+			});
+
+			balancebutton.addEventListener('touchend', e => {
+				balancebutton.style.transform = "scale(1)";
+			});
 	</script>
 	
 </body>
